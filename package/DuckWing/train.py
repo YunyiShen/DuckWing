@@ -47,7 +47,7 @@ def train(model, optimizer, criterion,
             print(f"Epoch: {epoch+1}/{num_epochs}, Validation Accuracy: {accuracy:.2f}%")
         if accuracy > best_val_acc:
             torch.save(model.state_dict(), 
-                       join(save_path, model.backbone_name + 
+                       join(save_path, model.name + 
                             '_DuckWing.pth')
                        )
             best_val_acc = accuracy
